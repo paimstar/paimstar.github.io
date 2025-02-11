@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>派之丼星的网页</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="stylesheet" href="/src/css/fonts.css">
+    <link rel="stylesheet" href="/src/css/animation.css">
+</head>
+
+<body>
+    <div id="stars"></div>
+    <header>
+        <div class="top-bar">
+            <div class="left-section">
+                <img src="/src/images/paimstar2.jpg" alt="头像" class="avatar">
+                <h1 class="name">派之井星<span>(PaimStar)</span></h1>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#section1" class="active">首页</a></li>
+                        <li><a href="#section2">编程经历</a></li>
+                        <li><a href="#section3">项目展示</a></li>
+                        <li><a href="#section4">个人爱好</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+    <main>
+        <section class="section1" id="section1">
+            <div class=" section-title">
+                <h2>首页~</h2>
+            </div>
+            <h3>在下不过是一位编程兴趣爱好者，</h3>
+            <h3> 这是敝人第一个自己做的个人网页，欢迎大家访问！</h3>
+            <h3> 如有任何意见或建议，欢迎联系我！</h3>
+        </section>  
+        <section class="section2" id="section2">
+            <div class="section-title">
+                <h2>编程经历~</h2>
+            </div>
+            <div class="section-box">
+                <ul class="list">
+                    <li id="item1"><span>unity2d游戏开发</span><span class="right-position">40%↑</span></li>
+                    <br>
+                    <br>
+                    <li id="item2"><span>python开发</span><span class="right-position">30%↑</span></li>
+                    <br>
+                    <br>
+                    <li id="item3"><span>HTML+CSS+JavaScript</span><span class="right-position">20%↑</span></li>
+                    <br>
+                    <br>
+                    <li id="item4"><span>学习使用AI</span><span class="right-position">10%↑</span></li>
+                    <br>
+                    <br>
+                    <li id="item5"><span>下一步Godot4.0游戏开发</span><span class="right-position">0%↓</span></li>
+                </ul>
+                <div class="img-box">      
+                    <audio id="audio1" src="/src/audios/jushou1.mp3"></audio>   
+                    <audio id="audio2" src="/src/audios/jushou2.mp3"></audio>  
+                    <audio id="audio3" src="/src/audios/jushou3.mp3"></audio> 
+                    <audio id="audio4" src="/src/audios/jushou4.mp3"></audio>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                    <img id="playButton" src="/src/images/jushou1.jpg" alt="education">
+                </div>
+            </div>
+        </section>
+        <section class="section3" id="section3">
+            <div class="section-title">
+                <h2>项目展示~</h2>
+            </div>
+            <div class="project">
+                <div class="duanzi">
+                    <p class="null">此地空余，还待明日再看。</p>
+                </div>
+            </div>
+        </section>
+        <section class="section4" id="section4">
+            <div class="section-title">
+                <h2>个人爱好~</h2>
+            </div>
+            <div class="section-box2">
+                <ul class="list2">
+                    <li class="option" onclick="selectOption(this)">游戏<span class="right-position">&gt;</span></li>
+                    <li class="option" onclick="selectOption(this)">二次元<span class="right-position">&gt;</span></li>
+                    <li>……</li>
+                </ul>
+                <div class="img-box2">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                    <img src="/src/images/game1.png" id="game1" class="active" alt="game1">
+                    <img src="/src/images/game2.png" id="game2" alt="game2">
+                    <img src="/src/images/game3.png" id="game3" alt="game3">
+                    <img src="/src/images/twocy1.png" alt="twocy1">
+                    <img src="/src/images/twocy2.png" alt="twocy2">
+                    <img src="/src/images/twocy3.png" alt="twocy3">
+                    <div class="box-left">&lt;</div>
+                    <div class="box-right">&gt;</div>
+                    <div class="name-box" id="name">三国杀</div>
+                    <div class="check-box">
+                        <ul>
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>© 2025 派之丼星  PaimStar 版权所有</p>
+        <p>联系我QQ: 2823808779 </p>
+    </footer>
+    <script src="/src/js/star.js"></script>
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/change.js"></script>
+    <script src="/src/js/navbar.js"></script>
+    <script src="/src/js/move.js"></script>
+    <script src="/src/js/audio.js"></script>
+</body>
+
+</html>

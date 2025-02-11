@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'titlefont';
+    src:url('/src/fonts/字体圈欣意冠黑体-v4.00.ttf');
+  font-style: normal;   
+  font-weight: normal;  
+}
+
+@font-face{
+    font-family: 'contentfont';
+    src: url('/src/fonts/瑞美加张清平行楷.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: 'lifont';  
+    src: url('/src/fonts/江城律动黑.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: 'namefont';
+    src: url('/src/fonts/鸿雷行书简体.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+*{
+    font-family: 'contentfont';
+}
+.name{
+    letter-spacing: 1.5px;
+    white-space: pre-wrap; /* 保留换行符 */
+}
+.h1,a,p,.list span{
+    font-family: 'titlefont';
+}
+
+h2{
+    font-family: 'lifont';
+    letter-spacing: 2px;
+}
+
+.name,#name{
+    font-family: 'namefont';
+    letter-spacing: 1.5px;
+}

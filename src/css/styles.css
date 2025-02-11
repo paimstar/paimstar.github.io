@@ -1,0 +1,633 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
+}
+
+
+.star {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: fadeOut 1s ease-out forwards;
+  z-index: 2000;
+}
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+      transform: scale(1);
+  }
+  to {
+      opacity: 0;
+      transform: scale(2);
+  }
+}
+header {
+  height: 80px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-bar {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+}
+
+/* 左侧头像和名字 */
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.name {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #d4f831;
+  /* 深紫色 */
+}
+
+.name:hover {
+  font-size: 1.5rem;
+}
+
+.navbar {
+  position: relative;
+  top: 50%;
+  right: -800px;
+}
+
+/* 右侧导航栏 */
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  /* 确保导航栏靠右对齐 */
+  position: relative;
+  top: 0;
+  right: 200px;
+}
+
+.navbar ul li {
+  margin: 0 1rem;
+}
+
+.navbar ul li a {
+  color: #7028e4;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.navbar ul li a:hover {
+  font-size: 1.6rem;
+}
+
+.navbar a.active {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+h2 {
+  color: #d4fc79;
+}
+
+h3 {
+  font-size: 2rem;
+  color: black;
+  white-space: pre-wrap;
+  text-decoration-line: inherit;
+  position: relative;
+  border-radius: 10px ;
+  border: solid 4px #d4fc79;
+}
+
+
+
+/* 主内容区 */
+main {
+  padding: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  top: 40px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  margin: 5px auto;
+  width: 100%;
+  padding: 1rem;
+  height: 90vh;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #f5f5f5;
+  border: 4px solid transparent;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  /* 渐变背景 */
+  background-clip: padding-box;
+  border-radius: 10px;
+  position: relative;
+}
+
+.section-box {
+  display: flex;
+  flex: 1;
+}
+
+/* 页脚 */
+footer {
+  color: black;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(-225deg,
+      #69eacb 0%,
+      #eaccf8 48%,
+      #6654f1 100%);
+}
+
+.section-title {
+  margin-top: 50px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 6vmin;
+  position: relative;
+  border-radius: 10px;
+  z-index: 0;
+  overflow: hidden;
+  background-image: linear-gradient(#cf6cc9 0%, #ee609c 100%);
+}
+
+.section-title::before{
+    content: '';
+    position: absolute;
+    width: 200%;
+    aspect-ratio: 1 / 1; /* 宽高比为1:1 */
+    top: 0;
+    left: -50%;
+    translate: -50%, -50%;
+    z-index: -10;
+    animation: rotate 10s linear infinite;
+    background-image: conic-gradient( red,orange,yellow,green,blue,indigo,violet);
+  }
+  
+.section-title::after{
+    content: '';
+    position: absolute;
+    inset:1vmin;
+    background-image: linear-gradient(#cf6cc9 0%, #ee609c 100%);
+    border:4vmin ;
+    z-index: -8;
+    border-radius: 10px;
+}
+
+.section-title:hover {
+  cursor: pointer;
+  /* 鼠标移上图片时显示手型 */
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+#flextitle {
+  flex: 1;
+}
+
+.section-box2 {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  margin: 20px auto;
+  flex-direction: row;
+  display: flex;
+  flex: 1;
+}
+
+.img-box2 {
+  margin-top: 10px;
+  margin-left: 50px;
+  max-height: 600px auto;
+  max-width: 600px auto;
+  /* 图片占50%宽度 */
+  text-align: center;
+  /* 图片靠右对齐 */
+  justify-content: center;
+  /* 图片靠下对齐 */
+  align-items: center;
+  /* 图片靠中 */
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex: 1;
+}
+
+.img-box2:hover {
+  cursor: pointer;
+  /* 鼠标移上图片时显示手型 */
+  transform: scale(1.1);
+  /* 鼠标移上图片时放大 */
+  background-size: scale(1.1);
+  /* 鼠标移上图片时放大 */
+}
+
+.img-box2 img {
+  display: flex;
+  position: relative;
+  width: 600px;
+  height: 450px;
+  cursor: pointer;
+  /* 鼠标移上图片时显示手型 */
+  transition: all 0.3s ease-in-out;
+  /* 图片切换时的过渡效果 */
+  border: #d299c2 5px solid;
+  border-radius: 10px;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+  /* 图片切换时的过渡效果 */
+  opacity: 0;
+}
+
+.img-box2 img.active {
+  opacity: 1;
+}
+
+.box-left {
+  position: relative;
+  width: 35px;
+  height: 70px;
+  top: auto;
+  line-height: 70px;
+  font-size: 26px;
+  left: -265px;
+  color: #fff;
+}
+
+.box-left:hover {
+  cursor: pointer;
+  /* 鼠标移上图片时显示手型 */
+  background-color: #00000050;
+}
+
+.box-right {
+  position: relative;
+  width: 35px;
+  height: 70px;
+  top: auto;
+  line-height: 70px;
+  font-size: 26px;
+  right: -265px;
+  color: #fff;
+}
+
+.box-right:hover {
+  cursor: pointer;
+  /* 鼠标移上图片时显示手型 */
+  background-color: #00000050;
+}
+
+.img-box2 .name-box {
+  position: absolute;
+  top: 50px;
+  left: 70px;
+  width: 180px;
+  height: 50px;
+  font-size: 35px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(236, 236, 23);
+  opacity: 0.9;
+  border-radius: 10px;
+}
+
+.img-box2 .name-box:hover {
+  cursor: pointer;
+  /* 鼠标移上图片时显示手型 */
+  transform: scale(1.1);
+  /* 鼠标移上图片时放大 */
+  background-size: scale(1.1);
+  /* 鼠标移上图片时放大 */
+}
+
+.check-box {
+  position: absolute;
+  bottom: 75px;
+  right: 150px;
+}
+
+.check-box>ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.check-box li {
+  margin: 0 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.7;
+}
+
+.check-box li:hover {
+  cursor: pointer;
+  /* 鼠标移上图片时显示手型 */
+  opacity: 0.88;
+}
+
+.check-box ul li.active {
+  opacity: 1;
+}
+
+.img-box {
+  margin-top: 60px;
+  margin-right: 50px;
+  position: relative;
+  width: 600px;
+  height: 400px;
+  text-align: center;
+  /* 图片靠右对齐 */
+  justify-content: center;
+  /* 图片靠下对齐 */
+  align-items: center;
+  /* 图片靠中 */
+  display: flex;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.img-box img {
+  width: 98%;
+  height: 98%;
+  cursor: pointer;
+  /* 鼠标移上图片时显示手型 */
+  transition: all 0.3s ease-in-out;
+  /* 图片切换时的过渡效果 */
+  z-index: 5;
+}
+
+
+.img-box::after,.img-box::before {
+  content: "";
+  position: absolute;
+  width: 605px;
+  height: 605px;
+  background-image: conic-gradient(from var(--angle), #d7d2cc 0%,#304352 20%,#d7d2cc 40%,#304352 60%,#d7d2cc 80%,#304352 100%);
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index:3;
+  
+}
+
+.img-box:hover::before{
+  animation: 3s spin linear infinite;
+}
+
+.img-box:hover {
+  transform: scale(1.05);
+  /* 图片放大 */
+}
+
+
+.img-box p {
+  margin: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.img-box h3 {
+  margin: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.img-box h4 {
+  margin: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.img-box h5 {
+  margin: 10px;
+  height: 90%;
+}
+
+h2 {
+  margin: 20px 0;
+  padding: 10px;
+  font-size: 2rem;
+}
+
+h3 {
+  margin-left: 20px;
+  background: #8fd3f4;
+  max-width: 60%;
+}
+
+h3:hover {
+  font-size: 30px;
+}
+
+.section1 {
+  background-image: url(/src/images/liuyingbg.png);
+}
+
+.section2 {
+  background-image: url(/src/images/bg1.png);
+  background-size: cover;
+  background-position: center;
+  /* 确保图片居中 */
+}
+
+.section3 {
+  background-image: url(/src/images/bg2.png);
+  background-size: cover;
+  background-position: center;
+  /* 确保图片居中 */
+}
+
+.section4 {
+  background-image: url(/src/images/bg3.png);
+  background-size: cover;
+  background-position: center;
+  /* 确保图片居中 */
+}
+
+.list {
+  display: flex;
+  flex: 1;
+  list-style: none;
+  /* 去掉默认的列表样式 */
+  padding: 5px;
+  margin-top: 40px;
+  width: 40%;
+  flex-direction: column;
+}
+
+.list li {
+  font-size: 16px;
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 3px;
+  list-style: none;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 0 100px 0 100px;
+  height: 20px;
+  transition: transform 0.3s ease-in-out;
+  /* 项目切换时的过渡效果 */
+}
+
+.list :hover {
+  transform: scale(1.1);
+  /* 鼠标移上项目时放大 */
+  background-size: scale(1.1);
+  /* 鼠标移上项目时放大 */
+  border: #d4fc79 4px solid;
+  border-radius: 100px 0 100px 0;
+  cursor: pointer;
+  /* 鼠标移上项目时显示手型 */
+}
+
+.list2 {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  margin-right: 50px;
+  max-width: 420px;
+  justify-content: flex-start;
+  padding: 0px;
+  margin: 10px;
+  list-style-type: none;
+  /* 移除默认列表样式 */
+  flex-direction: column;
+  opacity: 0.8;
+}
+
+.list2 li {
+  padding: 15px 20px;
+  /* 内边距 */
+  margin-bottom: 20px;
+  /* 列表项间距 */
+  background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+  border: #88d3ce 3px solid;
+  border-radius: 10px;
+  transition: transform 0.3s ease background-size 0.3s ease;
+  /* 添加过渡效果 */
+}
+
+.list2 :hover {
+  transform: scale(1.05);
+  /* 稍微放大 */
+  color: #f9fea5;
+  border: #f9fea5 5px solid;
+  cursor: pointer;
+  /* 鼠标移上项目时显示手型 */
+  opacity: 0.8;
+}
+
+.list2 li.active {
+  transform: scale(1.05);
+  /* 稍微放大 */
+  color: #f9fea5;
+  border: #f9fea5 5px solid;
+  cursor: pointer;
+  /* 鼠标移上项目时显示手型 */
+  opacity: 1;
+}
+
+span {
+  margin-left: 20px;
+  color: #3815c5;
+  font-size: 24px;
+}
+
+.right-position {
+  float: right;
+  padding: 5px;
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #64b3f4;
+  border-radius: 15px;
+}
+
+#item1 {
+  background-image: linear-gradient(60deg, #ff5858 0%, #f09819 100%);
+}
+
+#item2 {
+  background-image: linear-gradient(120deg, #f09819 0%, #fee140 100%);
+}
+
+#item3 {
+  background-image: linear-gradient(60deg, #fee140 0%, #43e97b 100%);
+}
+
+#item4 {
+  background-image: linear-gradient(120deg, #43e97b 0%, #8fd3f4 100%);
+}
+
+#item5 {
+  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+}
+
+.duanzi {
+  display: flex;
+  width: 30%;
+  background-color: #faf9de;
+  border: #304352 1px solid;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.option {
+  font-size: 24px;
+}
+
+.null {
+  letter-spacing: 3px;
+}
